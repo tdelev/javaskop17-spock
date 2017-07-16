@@ -1,15 +1,17 @@
 package me.delev.javaskop17
 
 import spock.lang.Specification
+import spock.lang.Subject
 
 /**
- * Example 1
+ * Starship Specification
  */
 class StarshipSpec extends Specification {
 
     def "science officer of the starship Enterprise is Spock"() {
         given:
-        def starship = new Starship("Enterprise", "Spock")
+        @Subject
+        def starship = new Starship("Enterprise", "Spk")
 
         when:
         def actual = starship.getScienceOfficer()

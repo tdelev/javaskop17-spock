@@ -10,6 +10,7 @@ import spock.lang.Specification
 class PublisherSubscriberSpec extends Specification {
 
     def publisher = new Publisher()
+
     def subscriber1 = Mock(Subscriber)
     def subscriber2 = Mock(Subscriber)
 
@@ -27,8 +28,8 @@ class PublisherSubscriberSpec extends Specification {
         publisher.publish("msg")
 
         then:
-        1 * subscriber1.recieve("msg")
-        0 * subscriber2.recieve(_)
+        1 * subscriber1.receive("msg")
+        0 * subscriber2.receive(_)
     }
 
 }

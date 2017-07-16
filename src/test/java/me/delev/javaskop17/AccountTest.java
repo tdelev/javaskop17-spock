@@ -1,23 +1,28 @@
 package me.delev.javaskop17;
 
-import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * JUnit Account test
  */
 public class AccountTest {
 
+    Account account;
+
+    @Before
+    public void setup() {
+        account = new Account(BigDecimal.valueOf(10));
+    }
+
     @Test
     public void withdrawSomeAmount() {
-        // given
-        Account account = new Account(BigDecimal.valueOf(10));
-        // when
         account.withdraw(BigDecimal.valueOf(7));
-        // then
-        Assert.assertEquals(BigDecimal.valueOf(3), account.getBalance());
+        assertEquals(BigDecimal.valueOf(3), account.getBalance());
     }
 
 }

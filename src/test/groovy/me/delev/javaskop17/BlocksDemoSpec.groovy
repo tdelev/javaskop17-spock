@@ -3,8 +3,6 @@ package me.delev.javaskop17
 import spock.lang.Specification
 import spock.lang.Unroll
 
-import static spock.util.matcher.HamcrestMatchers.closeTo
-
 /**
  * Basic Spock blocks demonstration
  */

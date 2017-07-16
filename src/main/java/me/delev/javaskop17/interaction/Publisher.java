@@ -19,7 +19,7 @@ public class Publisher {
 
     public void publish(String message) {
         subscribers.stream()
-                .filter(Subscriber::isActive)
-                .forEach(subscriber -> subscriber.recieve(message));
+                //.filter(Subscriber::isActive)
+                .forEach(subscriber -> subscriber.receive(message));
     }
 }

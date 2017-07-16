@@ -32,8 +32,8 @@ class Conditions extends Specification {
 
     def "compare sets"() {
         def set1 = ["Fred", "Wilma", "Dino"] as Set
-        def set2 = ["Fred", "Wilma", "Dino"] as Set
-        //def set2 = ["Wilma", "Dino", "Barney"] as Set
+        //def set2 = ["Fred", "Wilma", "Dino"] as Set
+        def set2 = ["Wilma", "Dino", "Barney"] as Set
 
         expect:
         set1 == set2
@@ -41,8 +41,8 @@ class Conditions extends Specification {
 
     def "compare POJOs"() {
         def person1 = new Person("Fred", 30, "Winstor Rd.")
-        def person2 = new Person("Fred", 30, "Winstor Rd.")
-        //def person2 = new Person("Frog", 30, "Windsor Rd.")
+        //def person2 = new Person("Fred", 30, "Winstor Rd.")
+        def person2 = new Person("Frog", 30, "Windsor Rd.")
 
         expect:
         person1 == person2
